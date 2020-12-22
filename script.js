@@ -1,24 +1,27 @@
 "use strict";
-let rollDiceNumber;
 const dice = document.querySelector(".dice");
 dice.style.display = "none";
+//button
 const buttonRollDice = document.querySelector(".btn--roll");
 const buttonHold = document.querySelector(".btn--hold");
 const buttonNewGame = document.querySelector(".btn--new");
-const player1CurrentScore = document.querySelector("#current--0");
-const player2CurrentScore = document.querySelector("#current--1");
+//current score
+const player1CurrentScore = document.getElementById("current--0");
+const player2CurrentScore = document.getElementById("current--1");
+
+// section of player1 vs section of player2
 const player1 = document.querySelector(".player--0");
 const player2 = document.querySelector(".player--1");
-const player1Name = document.querySelector("#name--0");
-const player2Name = document.querySelector("#name--1");
-let player1Score = document.querySelector("#score--0");
-let player2Score = document.querySelector("#score--1");
+//total score
+let player1Score = document.getElementById("score--0");
+let player2Score = document.getElementById("score--1");
+
 let score1 = 0;
 let score2 = 0;
 let currentScore1 = 0;
 let currentScore2 = 0;
 buttonRollDice.addEventListener("click", function () {
-  rollDiceNumber = Math.floor(Math.random() * 6) + 1;
+  const rollDiceNumber = Math.floor(Math.random() * 6) + 1;
   if (player1.classList.contains("player--active")) {
     if (rollDiceNumber === 1) {
       dice.style.display = "block";
