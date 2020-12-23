@@ -61,6 +61,7 @@ buttonHold.addEventListener("click", function () {
     if (score1 >= 100) {
       player1.classList.add("player--winner");
       disabledButton();
+      dice.style.display = "none";
     } else {
       togglePlayerActive();
     }
@@ -72,6 +73,7 @@ buttonHold.addEventListener("click", function () {
     if (score2 >= 100) {
       player2.classList.add("player--winner");
       disabledButton();
+      dice.style.display = "none";
     } else {
       togglePlayerActive();
     }
